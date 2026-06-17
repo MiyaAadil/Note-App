@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import NoteLogo from "../assets/notes.png";
 
 const Note = () => {
 
@@ -30,7 +31,7 @@ const Note = () => {
 
         <div className='flex gap-2'>
             <h1 className='text-3xl font-bold'>Add Notes</h1>
-            <img className='h-8' src="src/assets/notes.png" alt="Note logo" />
+            <img className='h-8' src={NoteLogo} alt="Note logo" />
         </div>
 
             <input onChange={(e) => {
@@ -47,7 +48,7 @@ const Note = () => {
       
       <div className='lg:border-l-2 flex lg:w-1/2 flex-col p-10 gap-5 h-screen overflow-y-scroll'>
 
-        <h1 className='text-3xl font-bold'>Your Notes</h1>
+        <h1 className='text-3xl font-bold'>Your Notes:</h1>
 
             <div className='flex flex-wrap justify-center gap-5 overflow-auto'>
                 {task.map((myNotes) => {
