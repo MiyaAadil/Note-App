@@ -47,7 +47,7 @@ const Note = () => {
       
       <div className='lg:border-l-2 flex lg:w-1/2 flex-col p-10 gap-5 h-screen overflow-y-scroll'>
 
-        <h1 className='text-3xl font-bold'>Your Notes:</h1>
+        <h1 className='text-3xl font-bold'>Your Notes</h1>
 
             <div className='flex flex-wrap justify-center gap-5 overflow-auto'>
                 {task.map((myNotes) => {
