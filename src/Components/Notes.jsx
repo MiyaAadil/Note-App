@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import NoteLogo from "../assets/notes.png";
+import bgNote from '../assets/note-bg.png'
 
 const Note = () => {
 
@@ -52,10 +53,13 @@ const Note = () => {
 
             <div className='flex flex-wrap justify-center gap-5 overflow-auto'>
                 {task.map((myNotes) => {
-                    return <div key={myNotes.id} className='h-60 w-55 rounded-2xl text-black p-4 bg-white relative'>
+                    return <div key={myNotes.id} style={{ backgroundImage: `url(${bgNote})`}} className='h-60 w-55 rounded-2xl text-black p-8 bg-cover bg-center relative'>
+
                         <h3 className='leading-tight text-2xl font-bold mb-2 text-[#00005f]'>{myNotes.title}</h3>
+
                         <p className='text-gray-600'>{myNotes.notes}</p>
-                        <button onClick={() => deleteNote(myNotes.id)} className='w-7 h-7 rounded-full bg-red-700 flex justify-center items-center text-white absolute top-2 right-2 cursor-pointer hover:bg-red-800 transition-all transform-200'>X</button>
+                        
+                        <button onClick={() => deleteNote(myNotes.id)} className='w-7 h-7 rounded-full bg-red-700 flex justify-center items-center text-white absolute top-0 right-0 cursor-pointer hover:bg-red-800 transition-all transform-200'>X</button>
                     </div>
                 })}
             </div>
